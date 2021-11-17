@@ -24,7 +24,8 @@ build:
 		--build-arg NOMAD_VERSION=$(NOMAD_VERSION) \
 		--platform $(BUILDX_TARGETPLATFORM) \
 		--tag $(IMAGE_NAME):latest \
-		--tag $(IMAGE_NAME):$(NOMAD_VERSION)
+		--tag $(IMAGE_NAME):$(NOMAD_VERSION) \
+		-o type=docker
 
 login:
 	test -n "$(DOCKER_USERNAME)"

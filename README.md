@@ -1,6 +1,6 @@
 # **Dockerized Nomad**
 
-Dockerized Nomad - Run Nomad Agent as Docker
+Dockerized Nomad - Run Nomad Agent as Container
 
 Useful for (not limited to) :
 
@@ -10,4 +10,4 @@ Useful for (not limited to) :
 
 ## **How To**
 
-//TODO
+Automated build using github actions, published image can be checked in [kholisrag/nomad](https://hub.docker.com/r/kholisrag/nomad/tags?page=1&ordering=last_updated)
