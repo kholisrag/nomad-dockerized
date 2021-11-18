@@ -4,14 +4,14 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - '!README.md'
-      - '!LICENSE'
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
 
   pull_request:
-    paths:
-      - '!README.md'
-      - '!LICENSE'
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
 
 jobs:
   buildx:

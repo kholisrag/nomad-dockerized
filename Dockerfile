@@ -11,6 +11,7 @@ RUN apt-get update \
     && curl -sOL https://releases.hashicorp.com/nomad/${NOMAD_VERSION}/nomad_${NOMAD_VERSION}_$(echo ${TARGETPLATFORM} | sed 's|/|_|g' | awk -F'_' '{print $1"_"$2}').zip \
     && unzip nomad_${NOMAD_VERSION}_$(echo ${TARGETPLATFORM} | sed 's|/|_|g' | awk -F'_' '{print $1"_"$2}').zip \
     && chmod +x ./nomad \
+    && apt-get purge -y unzip \
     && mv nomad /usr/bin/nomad \
     && rm nomad_${NOMAD_VERSION}_$(echo ${TARGETPLATFORM} | sed 's|/|_|g' | awk -F'_' '{print $1"_"$2}').zip \
     && rm -rf /var/lib/apt/lists/*
